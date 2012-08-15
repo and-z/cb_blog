@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title2 %}New category{% endblock %}
+
+{% block body %}
+<form method="post" class="well form-horizontal">
+	<label>Name</label>
+	<input name="category_name" type="text"/>
+	<button type="submit" class="btn">Create category</button>
+</form>
+{% endblock %}
