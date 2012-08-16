@@ -1,3 +1,3 @@
--module(post, [Id, PostTitle, PostText, CategoryId, PostAuthor]).
+-module(post, [Id, CategoryId, PostTitle, PostText, PostAuthor]).
 -compile(export_all).
 -belongs_to(category).

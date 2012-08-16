@@ -1,2 +1,3 @@
--module(category, [Id, Name::string()]).
+-module(category, [Id, CategoryName]).
 -compile(export_all).
+-has({posts, many}).

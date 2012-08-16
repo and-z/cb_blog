@@ -8,7 +8,7 @@ view('GET', []) ->
 create('GET', []) ->
 	ok;
 create('POST', []) ->
-	Name = Req:post_param("category_name"),
-	Category = category:new('id', Name),
+	CategoryName = Req:post_param("category_name"),
+	Category = category:new('id', CategoryName),
 	Category:save(),
 	{redirect, [{action, "view"}]}.
