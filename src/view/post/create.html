@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title2 %}New post{% endblock %}
+
+{% block body %}
+<form method="post" class="well">
+
+	{% if categories %}
+	<select name="category_id">
+		{% for category in categories %}
+		<option value="{{ category.id }}">{{ category.category_name }}</option>
+		{% endfor %}
+	</select>
+	{% endif %}
+
+	<label>Title</label>
+	<input name="post_title" type="text"/>
+	<input name="post_author" type="hidden" value="andreas"/>
+
+	<label>Text</label>
+	<textarea name="post_text" class="input-xlarge" id="textarea" rows="3"></textarea>
+
+	<button type="submit" class="btn">Create post</button>
+</form>
+{% endblock %}
