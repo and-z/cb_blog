@@ -4,3 +4,6 @@ deps
 *.o
 *.beam
 *.plt
+priv/cb_blog.routes
+priv/init/
+priv/rebar/
