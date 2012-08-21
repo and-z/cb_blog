@@ -3,23 +3,41 @@
 {% block title2 %}New post{% endblock %}
 
 {% block body %}
-<form method="post" class="well">
+<form method="post" class="form-horizontal">
 
-	{% if categories %}
-	<select name="category_id">
-		{% for category in categories %}
-		<option value="{{ category.id }}">{{ category.category_name }}</option>
-		{% endfor %}
-	</select>
-	{% endif %}
+	<div class="control-group">
+		<label class="control-label">Select category</label>
+		<div class="controls">
+		{% if categories %}
+		<select name="category_id">
+			{% for category in categories %}
+			<option value="{{ category.id }}">{{ category.category_name }}</option>
+			{% endfor %}
+		</select>
+		{% endif %}
+		</div>
+	</div>
 
-	<label>Title</label>
-	<input name="post_title" type="text"/>
+	<div class="control-group">
+		<label class="control-label" for="post_title">Title</label>
+		<div class="controls">
+			<input name="post_title" type="text"/>
+		</div>
+	</div>
+
 	<input name="post_author" type="hidden" value="andreas"/>
 
-	<label>Text</label>
-	<textarea name="post_text" class="input-xlarge" id="textarea" rows="3"></textarea>
+	<div class="control-group">
+		<label class="control-label" for="post_text">Text</label>
+		<div class="controls">
+			<textarea  name="post_text" class="input-xlarge"rows="3"></textarea>
+		</div>
+	</div>
 
-	<button type="submit" class="btn">Create post</button>
+	<div class="control-group">
+		<div class="controls">
+			<button type="submit" class="btn">Create post</button>
+		</div>
+	</div>
 </form>
 {% endblock %}

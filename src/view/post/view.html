@@ -7,7 +7,10 @@
 {% if posts %}
 	<ul>
 		{% for post in posts %}
-		<li>{{ post.post_title }} [{{ post.post_author }}]</li>
+		<li>
+			<h3><a href="view/{{ post.id }}">{{ post.post_title }}</a></h3> 
+			<p>[{{ post.post_author }}, {{ post.creation_date|date:"d.m.y"}}]</p>
+		</li>
 		{% endfor %}
 	</ul>
 {% else %}
